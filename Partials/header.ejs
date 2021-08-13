@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans+JP:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="/style.css">
+    <div class="header">
+        <strong>
+            <p id="name">Hello <%=User.name%></p>
+        </strong>
+        <a href="/dashboard" id="home">Home</a>
+        <a href="/dashboard/teams" id="teams">Teams</a>
+        <a href="/dashboard/teams/join" id="join">Join</a>
+        <a href="/user/logout" id="logout" >Log Out</a>
+    </div>
