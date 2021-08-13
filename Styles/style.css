@@ -1,0 +1,287 @@
+html,body
+{
+    height:99%;
+    width:99%;
+}
+h1{
+    font-size: 4em;
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.container
+{
+    font-size: 2em;
+    margin-left: 35%;
+    margin-right:35%;
+    font-family: 'Noto Sans JP', sans-serif;
+    border: 5px solid grey;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom:2% ;
+}
+.bottom
+{
+    font-size: 2em;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+}
+#bottom
+{
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    top:20vh;
+    width: 100%;
+    font-size: 2vw;
+    font-family: 'Noto Sans JP', sans-serif;
+    display: inline-block;
+}
+.inline
+{
+    display: inline-block;
+}
+.button
+{
+   text-align: center;
+   padding:5px;
+   background-color: red;
+   color: white;
+   font-size: large;
+   width: 100%;
+}
+
+.input
+{
+    border-radius: 0.5em;
+    width: 100%;
+    height: 25px;
+    border:3px solid lightgreen;
+}
+
+
+/*Dashboard*/
+.name
+{
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-right: 50%;
+    font-size :2em;
+    position: absolute;
+    vertical-align: top;
+    height: 20%;
+    width:50%;
+}
+.header
+{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size:2em;
+    text-decoration: none;
+    position: absolute;
+    background-color: rgb(99, 73, 248);
+    vertical-align: middle;
+    height:7vw;
+    width:100%;
+    display:inline-block;
+}
+
+#name
+{
+    left: 2vw;
+    font-family: 'Hahmlet', serif;  
+    color:black;
+    width:50%;
+    font-size: 2vw;
+    position: absolute;
+    text-align:left;
+    vertical-align: middle;
+}
+#logout:hover
+{
+    background-color:red;
+}
+
+#teams
+{
+    border-radius: 0.5vw;
+    color:white;
+    width:10vw;
+    height:3vw;
+    position: absolute;
+    right: 15vw;
+    font-size:2vw;
+    top:2vw;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+}
+#teams:hover
+{
+    background-color:red;
+}
+#join
+{
+    border-radius: 0.5vw;
+    color:white;
+    width:10vw;
+    height:3vw;
+    position: absolute;
+    right: 25vw;
+    font-size:2vw;
+    top:2vw;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+}
+#join:hover
+{
+    background-color: red;
+}
+#home
+{
+    border-radius: 0.5vw;
+    color:white;
+    width:10vw;
+    height:3vw;
+    position: absolute;
+    right: 35vw;
+    font-size:2vw;
+    top:2vw;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+}
+#home:hover
+{
+    background-color: red;
+}
+#logout
+{   
+    border-radius: 0.5vw;
+    color: white;
+    width: 10vw;
+    height: 3vw;
+    position: absolute;
+    right: 5vw;
+    font-size: 2vw;
+    top:2vw;
+    text-align: center;
+    vertical-align:middle;
+    text-decoration: none;
+}
+.left
+{
+    font-family: 'Noto Sans JP', sans-serif;
+    height: 100%;
+    width: 30%;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: greenyellow;
+}
+.logout
+{
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-left: 50%;
+    height: 20%;
+    width: 50%;
+    text-decoration: none;
+    font-size: 2em;
+    position:relative;
+    text-align: end;
+}
+.middle
+{
+    position: absolute;
+    width: 100%;
+    top:8vw;
+    bottom: 0;
+}
+.welcome
+{
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top:50%;
+    color:rgb(248, 64, 217);
+    transform: translate(-50%,-50%);
+    font-size: 4vw;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.teams-list
+{
+    color: black;
+    position:absolute;
+    left:30%;
+    right:30%;
+    font-size:2vw;
+    font-family: 'Noto Sans JP', 'sans-serif';
+}
+#create-team
+{
+    color: black;
+    text-decoration: none;
+}
+.heading
+{
+    font-size: 3vw;
+}
+.heading-1
+{
+    font-size: 3.5vw;
+    height:4vw;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 0px;
+    font-family: 'Noto Sans JP', 'sans-serif';
+
+}
+.heading-2
+{
+    font-size:3vw;
+    top:0;
+    margin-top: 0px;
+}
+.team-link
+{
+    color: black;
+    position:absolute;
+    height: 100%;
+    left:30%;
+    right:30%;
+    font-size:2vw;
+    font-family: 'Noto Sans JP', 'sans-serif';
+}
+#link
+{
+    background-color: rgb(238, 183, 2);
+    color: white;
+    height:3vw;
+    width: 6vw;
+    text-align: center;
+    font-size: 100%;
+}
+.li:hover
+{
+    color:red;
+}
+.error-msg
+{
+    width:100%;
+    font-family: 'Noto Sans JP', 'sans-serif';
+    font-size: 30px;
+    color:red;
+    text-align: center;
+}
+.success-msg
+{
+    width:100%;
+    font-family: 'Noto Sans JP', 'sans-serif';
+    font-size: 30px;
+    text-align: center;
+    color: rgb(0, 165, 0);
+}
+::placeholder
+{
+    font-size:100%;   
+}
+
+
