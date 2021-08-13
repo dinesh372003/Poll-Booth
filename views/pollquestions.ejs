@@ -1,0 +1,65 @@
+<%-include("../Partials/header")%>
+<div class="middle">
+    <div class="ab">
+    <p><%=teamname%>-<%=pollname%></p>
+    </div>
+<div class="QandA">
+    <form method="POST">
+    <p>Type your Question</p>
+    <label for="Question">Question-<%=count%></label>
+    <input class="input" id="Question-enter" type="text" name="Question" placeholder="Enter you Question" required></input>
+    
+    <label for="Option1">Option-1</label>
+    <input class="input" id="Options" type="text" name="Option1" placeholder="Enter your First Option" required></input>
+    
+    <label for="Option2">Option-2</label>
+    <input class="input" id="Options" type="text" name="Option2" placeholder="Enter your Second Option" required></input>
+    
+    <label for="Option3">Option-3</label>
+    <input class="input" id="Options" type="text" name="Option3" placeholder="Enter your Third Option"></input>
+    
+    <label for="Option4">Option-4</label>
+    <input class="input" id="Options" type="text" name="Option4" placeholder="Enter your Fourth Option"></input>
+    <%var next="dashboard/teams/"+teamname+"/"+pollname+"/pollquestions/next"%>
+    <button name="next" type="submit" formaction="/dashboard/teams/<%-teamname%>/<%-pollname%>/pollquestions/next">Next</button>
+    <button name="finish" type="submit" formaction="/dashboard/teams/<%-teamname%>/<%-pollname%>/pollquestions/finish">Finish</button>
+</form>
+<br>
+
+<style>
+#notextdec
+{
+    text-decoration: none;
+    color: black;
+}
+#notextdec:hover
+{
+    color:rgb(12, 67, 218);
+}
+.ab
+{
+    font-size: 3vw;
+}    
+.QandA
+{
+    font-size:2vw;
+    margin-left:30%;
+    margin-right:30%;
+}
+#Question-enter
+{
+    height:4vw;
+    width:100%;
+
+}
+::placeholder
+{
+    text-align: center;
+    font-size:100%;
+    color: blue;
+}
+</style>
+</div>
+</div>
+</body>
+</html>

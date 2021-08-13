@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <h1>
+        Login
+    </h1>
+    <!--importing google fonts-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans+JP:wght@300&display=swap');
+    </style>
+</head>
+<body>
+
+    <link rel="stylesheet" href="/style.css">
+    
+    <strong>    
+    <div class="success-msg">
+    <%if(typeof suc!="undefined"){%>
+    <%for(var i=1;i<=suc.length;i++){%>
+    <p><%=suc[i-1]%></p>
+    <%}%>
+    <%}%>            
+    </div>
+    <div class="error-msg">
+    <%if(typeof err!="undefined"){%>
+    <%for(var i=1;i<=err.length;i++){%>
+    <p><%=err[i-1]%></p>
+    <%}%>
+    <%}%>
+    </div>
+    </strong>
+
+    <div class="container">
+    <strong>
+    </strong>
+        <form action="/user/login" method="POST">
+            <div>
+            <label for="email">Email Id:</label>
+            <br>
+            <input class="input" placeholder="Enter your Email Id" type="email" name="email" required/>
+            </div>
+            <div>
+            <label for="password">Password:</label>
+            <br>
+            <input class="input" placeholder="Enter the password" type="password" name="password" required>
+            </div>
+            <button class="button" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="bottom">   
+        <div class="inline">
+        <p>Don't have an account?</p>
+        </div> 
+        <a href="/user/register">Register</a>
+    </div>
+        
+</body>

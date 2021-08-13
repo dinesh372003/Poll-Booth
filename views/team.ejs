@@ -1,0 +1,25 @@
+<%-include("../Partials/header.ejs")%>
+<div class="middle">
+    <p class="heading-1"><strong>Team: <%=teamname%></strong></p>
+    <br>
+    <div class="teams-list">
+        <p class="heading-2">Your Poll List</p>
+        <%poll.forEach(function(poll){%>
+            <%if(teamname==poll.teamname){%>
+                <a class="li" href="/dashboard/teams/<%-teamname%>/<%-poll._id%>" id="create-team"><li><%=poll.pollname%></li></a>
+            <%}%>
+        <%});%>
+    <%(User.admin).forEach(function(teams){%>
+        <%if(teams==teamname){%>
+            <a class="li" href="/dashboard/teams/<%-teamname%>/createpoll" id="create-team"><li class="li">Create a new poll</li></a>
+            <%team.forEach(function(teamss){%>
+                <%if(teamss.teamname==teamname){%>
+                    <p> Team Code : <%=teamss.teamcode%> </p>
+                <%}%>
+                <%});%>
+        <%};%>
+    <%});%>
+</div>
+</div>
+</body>
+</html>

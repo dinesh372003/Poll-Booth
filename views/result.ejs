@@ -1,0 +1,66 @@
+<%-include("../Partials/header.ejs")%>
+<div class="middle"> 
+    <p class="heading-1"><%=poll.pollname%></p>
+<div class="Questions">
+    <%for(var i=0;i<=poll.TotalQuestion-1;i++){%>
+    <div class="Questionno"><p>Question-<%=i+1%></p></div>
+    <p><%=poll.Question[i]["Questions"]%></p>
+    <div class="Answers">
+    
+    <li><%=poll.Question[i]["Option-1"]%>-------<%=poll.Count[i]["Option-1"]%> Votes</li>
+    
+    <li><%=poll.Question[i]["Option-2"]%>-------<%=poll.Count[i]["Option-2"]%> Votes</li>
+    
+    <%if(poll.Question[i]["Option-3"].length>0){%>
+    <li><%=poll.Question[i]["Option-3"]%>-------<%=poll.Count[i]["Option-3"]%> Votes</li>
+    <%}%>
+
+    <%if(poll.Question[i]["Option-4"].length>0){%>
+    <li><%=poll.Question[i]["Option-4"]%>-------<%=poll.Count[i]["Option-4"]%> Votes</li>
+    <%}%>
+    
+    </div>
+<%}%>
+<br>
+<form action="/dashboard/teams/<%-poll.teamname%>/<%-poll.id%>/delete" method="POST" >
+<button class="end"><strong>End Poll</strong></button>
+</form>
+<br>
+<!-- <script>
+    const end=document.querySelector("button.end");
+    end.addEventListener("click",(e)=>
+    {
+        const endpoint=`/dashboard/{poll.teamna`
+    })
+</script> -->
+<style>
+.Questions
+{
+    margin-left:30%;
+    margin-right:30%;
+    font-size:2.5vw;
+}
+.Answers
+{
+    margin-left:10%;
+    margin-right:10%;
+    font-size:2vw;
+}
+.Questionno
+{
+    color:red;
+}
+.end
+{
+    height: 5vh;
+    width: 100%;
+    font-size: 4vh;
+    text-align: center;
+    color:black;
+    background-color:orange;
+    border-radius: 1vh;
+    border:0.3vh solid black
+}
+</style>
+</body>
+</html>

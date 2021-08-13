@@ -1,0 +1,72 @@
+<%-include("../Partials/header.ejs")%>
+<div class="middle">      
+<p class="heading-1"><%=poll.pollname%></p>
+<%var j%>
+<div class="Questions">
+    <form method="POST" action="/dashboard/teams/<%-poll.teamname%>/<%-poll.id%>">
+    <%for(var i=0;i<=poll.TotalQuestion-1;i++){%>
+    
+        <div class="Questionno"><p>Question-<%=i+1%></p></div>
+        <p><%=poll.Question[i]["Questions"]%></p>
+        <div class="Answers">
+        
+        <%j=1%>
+        <input id="radio" type="radio" name="Option-<%-i%>" value="<%-j%>"></input>
+        <label for="Option<%-i%>"><%=poll.Question[i]["Option-1"]%></label>
+        <br>
+        <%j++%>
+        <input id="radio" type="radio" name="Option-<%-i%>" value="<%-j%>"></input>
+        <label for="Option<%-i%>"><%=poll.Question[i]["Option-2"]%></label>
+        <br>
+        <%j++%>
+        <%if(poll.Question[i]["Option-3"].length>0){%>
+        <input id="radio" type="radio" name="Option-<%-i%>" value="<%-j%>"></input>
+        <label for="Option<%-i%>"><%=poll.Question[i]["Option-3"]%></label>
+        <br>
+        <%}%>
+        <%j++%>
+        <%if(poll.Question[i]["Option-4"].length>0){%>
+        <input id="radio" type="radio" name="Option-<%-i%>" value="<%-j%>"></input>
+        <label for="Option<%-i%>"><%=poll.Question[i]["Option-4"]%></label>
+        <%}%>
+        </div>
+    <br>
+    <%}%>
+    <button class="vote" type="submit">Vote</button>
+    </form>
+    <br>
+    <br>
+    <br>
+</div>
+</div>
+</body>
+<style>
+.Questions
+{
+    margin-left:30%;
+    margin-right:30%;
+    font-size:2.5vw;
+}
+.Answers
+{
+    margin-left:10%;
+    margin-right:10%;
+    font-size:2vw;
+}
+.Questionno
+{
+    color:red;
+}
+.vote
+{
+    height:7vh;
+    width:7vw;
+    border-radius:1vh;
+    color:white;
+    border:0.5vh solid black;
+    text-align:center;
+    font-size:100%;
+    background-color: blue;
+}
+</style>
+</html>

@@ -1,0 +1,23 @@
+<%-include("../Partials/header")%>
+<div class="middle">
+<div class="teams-list">
+<%(User.admin).forEach(function(teams){%>
+<%if(teams==teamname){%>
+    <%flag=1%>
+    <p class="heading">Create a New Poll</p>
+    <form method="POST" action="/dashboard/teams/<%-teamname%>/createpoll">
+    <div>
+    <label for="pollname">Enter you Poll Name</label>
+    <input class="input" type="text" name="pollname" required>
+    <button type="submit">Create</button>
+    </div>
+    </form>
+    <%}});%>
+<%if(flag==0){%>
+    <p>Sorry your not Admin</p><br>
+    <p>Only Admins can create a poll</p>
+<%}%>
+</div>
+</div>
+</body>
+</html>
